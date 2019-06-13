@@ -1,0 +1,16 @@
+FROM fedora
+#this is base image where we want some changes
+# from check images in local system if not present then pull it from DH
+MAINTAINER  harsh.mangal1108@gmail.com
+#info aboout image creator 
+RUN yum install httpd -y
+# launch the container and do the changes
+COPY simple-html-css /var/www/html
+# source base os m ---> container [file will copied]
+EXPOSE 80
+# expose -- we want to use HTTP protocol inside container (port=80)
+ENTRYPOINT httpd -DFOREGROUND
+# "cmd" at exitpoint can be used but exitpoint will not replace default process but cmd can chnage
+#  by default process of conatiner {systemctl cant be used}
+# ulternative way of starting httpd service
+                                                                                                                                                                        
