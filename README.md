@@ -1,2 +1,9 @@
 # Docker
-DOCKER related things
+##Working with Docker
+# Commands
+## docker run ubuntu
+
+
+
+
+ 
