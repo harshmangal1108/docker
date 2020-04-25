@@ -1,0 +1,2 @@
+If that image is already present in system then it will only start conatiner
+It will not build image
