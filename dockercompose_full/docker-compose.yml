@@ -1,0 +1,24 @@
+version: "3.8"
+services:
+ app1:
+  image: harsh:day12v1 
+  ##name of image want to build
+  build:       
+  #location of Dfile
+   context: .
+   dockerfile: harsh.dockerfile
+  container_name: harshc1
+  ports:
+   - "9801:80"
+  networks:
+   - harshbr1 ##want to use this bridge but this is not present as now
+networks: ## here will let app allow bridge
+ harshbr1:
+### when dockerfile is not at same location
+#  image: harsh:day12v1 ##name of image want to build
+#   build: 
+#    context: . #location of Dfile
+#    dockerfile ashu.dockerfile
+#   container_name: harshc1
+#   ports:
+#    - "98989:80"
