@@ -1,2 +1,5 @@
 If that image is already present in system then it will only start conatiner
 It will not build image
+#### if  we run 
+docker-compose up --build 
+##tthen it will forecefull build new otherwise not even if changes are done in some codde or image
