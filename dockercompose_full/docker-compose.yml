@@ -12,8 +12,12 @@ services:
    - "9801:80"
   networks:
    - harshbr1 ##want to use this bridge but this is not present as now
-networks: ## here will let app allow bridge
- harshbr1:
+  volumes:
+   - harshvol:/mnt/google
+networks:
+ harshbr1: ## here will let app allow bridge
+volumes: 
+ harshvol: ## volume will be attached at specifed location
 ### when dockerfile is not at same location
 #  image: harsh:day12v1 ##name of image want to build
 #   build: 
